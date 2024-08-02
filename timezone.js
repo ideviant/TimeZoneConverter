@@ -16,11 +16,14 @@ function isFreeTime(time) {
 
 function setFace(locationHour, faceLocation) {
     if (isFreeTime(locationHour)) {
-        document.getElementById(faceLocation).src = "images/face-smile.svg";
+        document.getElementById(faceLocation).src =
+            "images/smile-circle-svgrepo-com.svg";
     } else if (isSleepTime(locationHour)) {
-        document.getElementById(faceLocation).src = "images/face-frown.svg";
+        document.getElementById(faceLocation).src =
+            "images/sad-circle-svgrepo-com.svg";
     } else {
-        document.getElementById(faceLocation).src = "images/face-meh.svg";
+        document.getElementById(faceLocation).src =
+            "images/expressionless-circle-svgrepo-com.svg";
     }
 }
 
@@ -106,7 +109,7 @@ input.addEventListener("input", (event) => {
             "0" + parseInt(parseInt(event.target.value) - 17) + ":00";
         document.getElementById("beijing_location_date").innerHTML = dayjs()
             .add(1, "day")
-            .tz("Asia/Shanghai")
+            .tz("Europe/Dublin")
             .format("ddd, DD MMM YYYY");
         selectBeijingHour = parseInt(parseInt(event.target.value) - 17);
     }
