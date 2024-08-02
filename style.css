@@ -19,6 +19,10 @@
     text-transform: uppercase;
 }
 
+html{
+    font-size: 18px;
+}
+
 .main {
     display: flex;
     align-items: center;
